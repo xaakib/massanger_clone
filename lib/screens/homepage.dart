@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:massanger_clone/screens/call_screen.dart';
 import 'package:massanger_clone/screens/chat_screen.dart';
 import 'package:massanger_clone/screens/page_screen.dart';
+import 'package:massanger_clone/screens/widget_screens/search_screen.dart';
 
 class HomePage extends StatelessWidget {
   // TabController _tabController TabController;
@@ -62,7 +63,12 @@ class HomePage extends StatelessWidget {
                       Icons.search_off_outlined,
                       color: Colors.black,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SearchScreen()),
+                      );
+                    },
                   ),
                   IconButton(
                     icon: Icon(
