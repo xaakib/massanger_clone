@@ -57,7 +57,9 @@ class HomePage extends StatelessWidget {
                       Icons.menu_open_outlined,
                       color: Colors.black,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      print("object");
+                    },
                   ),
                 ],
               )
