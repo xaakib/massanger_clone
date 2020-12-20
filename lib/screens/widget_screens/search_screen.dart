@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../call_screen.dart';
-import '../chat_screen.dart';
 import '../page_screen.dart';
+import 'sad_no_result.dart';
 
 class SearchScreen extends StatelessWidget {
   @override
@@ -18,7 +18,9 @@ class SearchScreen extends StatelessWidget {
                 Icons.arrow_back_ios_outlined,
                 color: Colors.black,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
             bottom: TabBar(
               indicatorColor: Colors.blue,
@@ -45,18 +47,22 @@ class SearchScreen extends StatelessWidget {
               ],
             ),
             title: Container(
-              height: 40,
               width: MediaQuery.of(context).size.width,
-              color: Colors.red,
+              height: 40,
+              child: TextFormField(
+                decoration: InputDecoration(hintText: "Search"),
+              ),
             ),
           ),
           body: TabBarView(
             children: [
-              ChatScreen(),
+              SadResult(),
               PageScreen(),
               CallScreen(),
             ],
           ),
+          floatingActionButton: FloatingActionButton(
+              child: Icon(Icons.brush_outlined), onPressed: () {}),
         ),
       ),
     );
