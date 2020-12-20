@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:massanger_clone/screens/chat_screen.dart';
 
 class HomePage extends StatelessWidget {
   // TabController _tabController TabController;
@@ -71,12 +72,12 @@ class HomePage extends StatelessWidget {
                     },
                   ),
                 ],
-              )
+              ),
             ],
           ),
           body: TabBarView(
             children: [
-              Icon(Icons.directions_car),
+              ChatScreen(),
               Icon(Icons.directions_transit),
               Icon(Icons.directions_bike),
             ],
